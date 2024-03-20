@@ -9,12 +9,17 @@
     <h1>Today is special day to DOM</h1>
     <button onclick="console.log('do not click')">Click Me</button>
     <button onclick="console.log('I`m busy now')">Another Button</button>
+    <!-- Option 1 : add onclick function. -->
     <button onclick="document.body.style.backgroundColor='yellow'">Warning</button>
     <button onclick="makeRed()">Make Red</button>
-    <button>Make Blue</button>
+    <button id="make-blue">Make Blue</button>
     <script src="Js/events.js"></script>
     <script>
-        
+        const makeBlueButton = document.getElementById('make-blue');
+        makeBlueButton.onclick = makeBlue;
+        function makeBlue(){
+            document.body.style.backgroundColor = 'blue'
+        }
     </script>
 </body>
 </html>
