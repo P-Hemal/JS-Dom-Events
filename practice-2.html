@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice 2</title>
+</head>
+<body>
+    <!-- <h1 id="handle-text">I am trying to solve this problem</h1>
+    <button onclick="changingText()">update</button>
+    <button id="event-listener">update 2</button>
+    <script>
+        function changingText (){
+            const handleText = document.getElementById('handle-text');
+            handleText.innerText = 'problem almost solved'
+        }
+        document.getElementById('event-listener').addEventListener('click', function(){
+            const handleText = document.getElementById('handle-text');
+            handleText.innerText = 'problem solved'
+        })
+    </script> -->
+
+    <h1 id="input-text-display">I'm trying to solve this problem</h1>
+    <input id="input-field" type="text">
+    <button id="btn-update">update</button>
+    <script>
+        document.getElementById('btn-update').addEventListener('click', function(){
+            const inputField = document.getElementById('input-field')
+            const inputText = inputField.value;
+
+            const p = document.getElementById('input-text-display')
+            p.innerText = inputText;
+            inputField.value = '';
+            
+        })
+    </script>
+</body>
+</html>

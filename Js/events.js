@@ -4,7 +4,7 @@ console.log('This is separate Js file')
 //<button onclick="console.log('I`m busy now')">Another Button</button>
 //<button onclick="document.body.style.backgroundColor='yellow'">Warning</button>
 
-// Option 2 : add onclick function.
+// Option 2 : add onclick function. Important [We will use this sometimes]
 function makeRed() {
     document.body.style.backgroundColor = 'red';
 }
@@ -30,3 +30,16 @@ pinkButton.addEventListener('click', makePink);
 function makePink() {
     document.body.style.backgroundColor = 'pink';
 }
+
+// Option 6 : add Event Listener function.
+
+const makeGreen = document.getElementById('make-green');
+makeGreen.addEventListener('click', function makeGreen() {
+    document.body.style.backgroundColor = 'green';
+});
+
+// Option 7 : add Event Listener function Final.  Important [We will use this sometimes]
+
+document.getElementById('make-goldenrod').addEventListener('click', function () {
+    document.body.style.backgroundColor = 'goldenrod'
+})

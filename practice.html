@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice</title>
+</head>
+<body>
+    <!-- <button onclick="document.body.style.backgroundColor = 'red'">Make red</button> -->
+    <!-- <button onclick="makeRed()">make red</button> -->
+    <!-- <button id="make-red-button">make red</button> -->
+    <button id="make-red">make red</button>
+    <script>
+        // 1
+        // function makeRed(){
+        //     document.body.style.backgroundColor = 'red';
+        // }
+
+        // 2
+        // const makeRedButton = document.getElementById('make-red-button')
+        // makeRedButton.onclick = makeBlue;
+        // function makeBlue(){
+        //     document.body.style.backgroundColor= 'blue'
+        // }
+
+        // 3
+        // const makeRed = document.getElementById('make-red')
+        // makeRed.onclick = function(){
+        //     document.body.style.backgroundColor = 'purple';
+        // }
+
+        // 4
+        const redButton = document.getElementById('make-red');
+        redButton.addEventListener('click', makeRed)
+        function makeRed(){
+            document.body.style.backgroundColor = 'goldenrod';
+        }
+    </script>
+</body>
+</html>
