@@ -11,6 +11,8 @@
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio tenetur nulla veritatis, facilis libero temporibus, a veniam optio deleniti culpa tempora. Saepe facere maiores a minima fugiat libero temporibus necessitatibus ab, qui explicabo sed blanditiis dolore reiciendis perferendis vero odit quidem. Temporibus, at dolore. Totam ullam quo nulla esse est.</p>
         <p>Provident consequatur vel esse, suscipit laudantium quidem ut eligendi ullam reiciendis, at sed commodi itaque! Eveniet distinctio assumenda molestias vel, officia cumque quia necessitatibus corrupti maiores aliquam, accusantium voluptates, quas corporis tempora unde laudantium. Vero consequatur eos nulla quis, illo saepe qui, sit, adipisci facilis cumque architecto rem quam omnis!</p>
         <p>Non in omnis asperiores dicta aperiam alias, iure voluptate officia, itaque libero deleniti sunt perspiciatis. Magni odio totam laborum illum amet necessitatibus, quae exercitationem eaque dolorum veritatis molestias eligendi tenetur nemo expedita impedit vero. Eius dolores tenetur, error dolor provident expedita, et nisi sequi doloribus tempora natus laudantium optio aspernatur.</p>
+    </div>
+    <div>
         <textarea name="" id="new-comment" cols="30" rows="10"></textarea>
         <br>
         <button id="btn-post">Post</button>
@@ -22,7 +24,8 @@
             const commentContainer = document.getElementById('comment-container');
             const p = document.createElement('p');
             p.innerText = commentText;
-            
+            commentContainer.append(p);
+            newComment.value = '';
         })
     </script>
 </body>
