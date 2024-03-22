@@ -20,11 +20,11 @@
     <script>
         document.getElementById('btn-post').addEventListener('click', function(){
             const newComment = document.getElementById('new-comment');
-            const commentText = newComment.value;
+            const inputText = newComment.value;
             const commentContainer = document.getElementById('comment-container');
             const p = document.createElement('p');
-            p.innerText = commentText;
-            commentContainer.append(p);
+            p.innerText = inputText;
+            commentContainer.appendChild(p)
             newComment.value = '';
         })
     </script>
