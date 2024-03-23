@@ -20,18 +20,32 @@
         })
     </script> -->
 
-    <h1 id="input-text-display">I'm trying to solve this problem</h1>
-    <input id="input-field" type="text">
-    <button id="btn-update">update</button>
+    <h1 id="secret-info">I'm trying to solve this problem</h1>
+    <input id="delete-confirm" type="text" placeholder="Please type delete">
+    <button id="btn-delete" disabled>Delete</button>
     <script>
-        document.getElementById('btn-update').addEventListener('click', function(){
-            const inputField = document.getElementById('input-field')
-            const inputText = inputField.value;
+        // document.getElementById('btn-update').addEventListener('click', function(){
+        //     const inputField = document.getElementById('input-field')
+        //     const inputText = inputField.value;
 
-            const p = document.getElementById('input-text-display')
-            p.innerText = inputText;
-            inputField.value = '';
+        //     const p = document.getElementById('input-text-display')
+        //     p.innerText = inputText;
+        //     inputField.value = '';
             
+        // })
+        document.getElementById('btn-delete').addEventListener('click', function(){
+            const secret = document.getElementById('secret-info');
+            secret.style.display = 'none'
+        })
+        document.getElementById('delete-confirm').addEventListener('keyup', function(event){
+            const text = event.target.value;
+            const deleteButton = document.getElementById('btn-delete');
+            if(text === 'delete'){
+                deleteButton.removeAttribute('disabled')
+            }
+            else{
+                deleteButton.setAttribute('disabled', true)
+            }
         })
     </script>
 </body>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment Box</title>
+</head>
+<body>
+    <h1>Please Add Your Comment</h1>
+    <div id="comment-container">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis assumenda praesentium nihil mollitia eos libero itaque aliquid magnam debitis quisquam odio officiis velit suscipit, nulla saepe. Quaerat officiis id possimus ex veniam, impedit quam suscipit fugit aut laboriosam tempore architecto alias in sequi. A natus ab tenetur, amet id quaerat.</p>
+        <p>Ipsum veniam error deserunt ab suscipit. Dicta dolorem optio, unde officiis beatae eius exercitationem iusto facilis consequuntur. Nobis culpa earum ut pariatur excepturi itaque asperiores. Adipisci exercitationem illum provident nulla eaque esse corporis facere, obcaecati quo fugiat non veniam nisi nam laboriosam consectetur pariatur praesentium magni dolor rem. Libero, pariatur!</p>
+        <p>Omnis, velit beatae vel nisi expedita dignissimos provident accusamus est, corrupti quia nihil aliquid eos magnam harum aut minima? Ipsa aut veniam amet maiores alias expedita dolorem libero aperiam. Cumque recusandae, similique ipsa consequatur nemo porro eum ipsam eligendi! Ipsa sequi ex repudiandae eos sit, saepe beatae eveniet culpa incidunt!</p>
+    </div>
+    <div>
+        <textarea name="" id="new-comment" cols="30" rows="10"></textarea>
+        <br>
+        <button id="btn-post">Post</button>
+        
+    </div>
+    <script>
+        document.getElementById('btn-post').addEventListener('click', function(){
+            const newComment = document.getElementById('new-comment');
+            const inputText = newComment.value;
+            const commentContainer = document.getElementById('comment-container');
+            const p = document.createElement('p');
+            p.innerText = inputText;
+            commentContainer.appendChild(p);
+            newComment.vale = '';
+        })
+    </script>
+</body>
+</html>
